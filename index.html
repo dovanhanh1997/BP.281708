@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Screen <br>
+<input type="text" id="view">
+<button id="addbtn" onclick="addelement()">Add</button>
+<button id="displaybtn" onclick="displayarray()">Display</button>
+<div id="addelement"></div>
+
+<script>
+    let array = [];
+
+    function addelement() {
+        array.push(document.getElementById("view").value);
+        console.log(array);
+        document.getElementById("view").value = "";
+    }
+    function displayarray() {
+        document.getElementById("addelement"). innerHTML = array;
+    }
+
+</script>
+</body>
+</html>
